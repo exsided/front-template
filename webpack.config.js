@@ -14,6 +14,23 @@ const outputDir = isDev ? '_dev' : 'build';
 const plugins = [];
 const rules = [];
 
+const htmlCompiler = glob.sync('src/pages/**/*.twig').map((filePath) =>
+{
+	let filename = filePath.replace(/.+\//, '');
+
+	return new HTMLWbpackPlugin({
+		filename: 'pages/' + filename.replace('twig', 'html'),
+		template: filePath.replace('src', '.'),
+		inject: 'body',
+		scriptLoading: 'blocking',
+		minify: false,
+		css: isDev ? ['./main.css', './critical.css'] : ['./css/main.css', './css/critical.css'],
+		js: isDev ? ['./main.js', './critical.js'] : ['./js/main.js', './js/critical.js'],
+	});
+});
+
+plugins.push(htmlCompiler);
+
 if(!isDev)
 {
 	plugins.push(new CleanWebpackPlugin());
@@ -32,21 +49,6 @@ if(!isDev)
 		}
 	);
 }
-
-const htmlCompiler = glob.sync('src/pages/**/*.twig').map((filePath) =>
-{
-	let filename = filePath.replace(/.+\//, '');
-
-	return new HTMLWbpackPlugin({
-		filename: 'pages/' + filename.replace('twig', 'html'),
-		template: filePath.replace('src', '.'),
-		inject: 'body',
-		scriptLoading: 'blocking',
-		minify: false,
-		css: isDev ? ['./main.css', './critical.css'] : ['./css/main.css', './css/critical.css'],
-		js: isDev ? ['./main.js', './critical.js'] : ['./js/main.js', './js/critical.js'],
-	});
-});
 
 module.exports = {
 	mode: isDev ? 'development' : 'production',
@@ -78,7 +80,7 @@ module.exports = {
 				},
 			]
 		})
-	].concat(plugins).concat(htmlCompiler),
+	].concat(plugins),
 	module:
 	{
 		rules:
