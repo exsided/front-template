@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<!--[if IE 6]>		<html id="section-reco_main" class="nojs ie6 ieb7 ieb8 ieb9 ieb10 split1 nosplit5 platform-PC platform-notouch"><![endif]-->
+		<!--[if IE 7]>		<html id="section-reco_main" class="nojs iea6 ie7 ieb8 ieb9 ieb10 split1 nosplit5 platform-PC platform-notouch"><![endif]-->
+		<!--[if IE 8]>		<html id="section-reco_main" class="nojs iea6 iea7 ie8 ieb9 ieb10 split1 nosplit5 platform-PC platform-notouch"><![endif]-->
+		<!--[if IE 9]>		<html id="section-reco_main" class="nojs iea6 iea7 iea8 ie9 ieb10 split1 nosplit5 platform-PC platform-notouch"><![endif]-->
+		<meta name="viewport" content="width=device-width">
+		<meta name="MobileOptimized" content="320" />
+		<meta name="HandheldFriendly" content="true" />
+		<meta charset="utf-8">
+		<meta name="viewport min-width=320px" content="min-width=320, initial-scale=1.0" />
+		<!--[if lt IE 9]>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js"></script>
+	<![endif]-->
+		<title>index</title>
+		<link href="css/main.css" rel="stylesheet">
+		<link href="css/critical.css" rel="stylesheet">
+	</head>
+
+	<body>
+		<header class="header">
+			<div class="container">
+				<h2>header</h2>
+			</div>
+		</header>
+		<div class="site-content">
+			<div class="container">
+				<form onsubmit="o2.form.submit(event)">
+					<label class="g-input _field" data-code="fio" data-call="empty">
+						<input name="name" type="text" class="g-input__input" placeholder="fio">
+						<div class="g-input__sub _error-msg">Error: invalid name</div>
+					</label> <br /> <br />
+					<label class="g-input _field" data-code="phone" data-call="empty">
+						<input name="phone" type="text" class="g-input__input  _phone-mask" placeholder="phone">
+						<div class="g-input__sub _error-msg">Error: invalid name</div>
+					</label> <br /> <br />
+					<label class="g-input _field" data-code="age" data-call="empty">
+						<input name="empty" type="text" class="g-input__input" placeholder="age">
+						<div class="g-input__sub _error-msg">Error: invalid name</div>
+					</label>
+					<br />
+					<br />
+					<label class="g-input _field" data-code="comment" data-call="empty">
+						<textarea name="some" class="g-input__input g-input__input--textarea" placeholder="comment"></textarea>
+						<div class="g-input__sub _error-msg">Error: invalid name</div>
+					</label>
+					<br />
+					<br />
+					<label class="g-input _field" data-code="test" data-call="empty test">
+						<input name="IIren" type="text" class="g-input__input" placeholder="test">
+						<div class="g-input__sub _error-msg">Error: invalid name</div>
+					</label>
+					<br />
+					<br />
+					<label class="g-input _field" data-call="selected">
+						<div class="g-select _select">
+							<input type="hidden" class="_selected-value" />
+							<div class="g-select__selected" onclick="o2.gSelect.toggle(this)">
+								<div class="g-select__selected-name _selected-text">Выберите страну</div>
+								<div class="g-select__arrow">
+									<svg width="13" height="8" viewBox="0 0 13 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M11.6042 0.877323L11.6041 0.877358L6.49996 5.99154L1.38574 0.877323C1.20497 0.696556 0.9113 0.696556 0.730533 0.877323C0.549767 1.05809 0.549767 1.35176 0.730533 1.53253L6.16232 6.96431C6.25248 7.05448 6.36605 7.09988 6.48992 7.09988C6.60306 7.09988 6.72691 7.05492 6.81752 6.96431L12.2488 1.53305C12.4403 1.35222 12.4402 1.05811 12.2594 0.877323C12.0786 0.696556 11.7849 0.696557 11.6042 0.877323Z" fill="#191C21" stroke="#191C21" stroke-width="0.1" />
+									</svg>
+								</div>
+							</div>
+							<div class="g-select__list _options">
+								<ul class="g-select__items">
+									<li data-value="code-Australia" class="g-select__item _option g-select__item--active" onclick="o2.gSelect.selecttItem(this)">Australia</li>
+									<li data-value="code-Argentina" class="g-select__item _option" onclick="o2.gSelect.selecttItem(this)">Argentina</li>
+									<li data-value="code-Belgium" class="g-select__item _option" onclick="o2.gSelect.selecttItem(this)">Belgium</li>
+									<li data-value="code-Canada" class="g-select__item _option" onclick="o2.gSelect.selecttItem(this)">Canada</li>
+									<li data-value="code-Italy" class="g-select__item _option" onclick="o2.gSelect.selecttItem(this)">Italy</li>
+									<li data-value="code-New Zealand" class="g-select__item _option" onclick="o2.gSelect.selecttItem(this)">New Zealand</li>
+								</ul>
+							</div>
+						</div>
+						<div class="g-input__sub _error-msg">Error: invalid name</div>
+					</label>
+					<br />
+					<br />
+					<input class="g-button" type="submit" value="Отправить" />
+					<input type="file" name="fidler">
+					<div class="form-errors _global-errors"></div>
+				</form>
+			</div>
+			<style>
+				.form-errors {
+					padding: 10px;
+					border: 1px solid red;
+					display: none;
+				}
+
+				.form-errors.show {
+					display: block;
+				}
+
+				.g-input__sub--width {
+					width: 120px;
+				}
+			</style>
+		</div>
+		<footer>
+			<div class="container">
+				<h2>footer</h2>
+			</div>
+		</footer>
+		<script defer src="js/main.js"></script>
+		<script defer src="js/critical.js"></script>
+	</body>
+
+</html>

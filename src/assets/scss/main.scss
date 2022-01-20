@@ -1,0 +1,46 @@
+/* mixins */
+@import 'base/mixins.scss';
+
+/* base */
+@import 'base/fonts';
+@import 'base/variables';
+@import 'base/normalize';
+@import 'base/typography';
+@import 'base/default';
+
+/* blocks */
+@import '@b/g-select/g-select.scss';
+@import '@b/g-input/g-input.scss';
+@import '@b/g-checkbox/g-checkbox.scss';
+@import '@b/g-button/g-button.scss';
+@import '@b/g-radio/g-radio.scss';
+/* @import 'blocks/component/component'; */
+
+/* pages */
+/* @import 'index'; */
+
+
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	outline: 0;
+	&:before,
+	&:after {
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+	}
+}
+html
+{
+	line-height: $mainLineHeight;
+	font-size: $mainFontSize;
+	color: $mainFontColor;
+	-webkit-font-smoothing: antialiased;
+}
+body
+{
+	background-image: url(#{$img}/logo.png);
+	background-repeat: no-repeat;
+}

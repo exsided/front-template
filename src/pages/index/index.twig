@@ -1,7 +1,15 @@
-{% extends "../../layouts/layout.twig" %}
+{% extends "@layouts/layout.twig" %}
 
 {% block page %}
 	<div class="container">
-		<h1>index</h1>
+		<p>В самом начале - расписываем все компоненты, придумываем названия</p>
+		<p>Пример подключения картинки</p>
+		<img src="./img/logo.png" alt="Logo" width="57px">
 	</div>
+	{#
+		Пример подключения файла
+		{% include '@blocks/component/component.twig' %}
+		Пример подключения svg
+		{% include '@assets/svg/component.svg' %}
+	#}
 {% endblock %}
