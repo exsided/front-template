@@ -5,12 +5,12 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "cross-env NODE_ENV=development webpack --mode development && npm run pages-list-dev",
+    "dev": "cross-env NODE_ENV=development webpack --mode development --progress",
     "serve": "cross-env NODE_ENV=development webpack serve --mode development --progress",
     "start": "cross-env NODE_ENV=development webpack serve --mode development --progress --open",
     "build": "cross-env NODE_ENV=production webpack --mode production --progress",
-    "pages-list": "cross-env NODE_ENV=production webpack --config webpack.config.pages-list.js",
-    "pages-list-dev": "cross-env NODE_ENV=development webpack --config webpack.config.pages-list.js"
+    "pages-list": "cross-env NODE_ENV=production webpack --config webpack.config.pages-list.js --progress",
+    "pages-list-dev": "cross-env NODE_ENV=development webpack --config webpack.config.pages-list.js --progress"
   },
   "author": "ktck",
   "license": "ISC",
@@ -32,6 +32,7 @@
     "file-loader": "^6.2.0",
     "fs": "0.0.1-security",
     "glob": "^7.2.0",
+    "gradient-string": "^2.0.0",
     "html-webpack-plugin": "^5.5.0",
     "img-optimize-loader": "^1.0.7",
     "mini-css-extract-plugin": "^2.4.5",

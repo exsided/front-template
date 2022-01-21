@@ -32,7 +32,7 @@ const outputDir = isDev ? '_dev' : 'build';
 const plugins   = [];
 const rules     = [];
 
-const htmlCompiler = glob.sync('src/pages/**/*.twig').map((filePath) =>
+const htmlCompiler = glob.sync('src/pages/*.twig').map((filePath) =>
 {
 	let filename = filePath.replace(/.+\//, '');
 
@@ -72,6 +72,7 @@ if(!isDev)
 module.exports = {
 	target: ['web', 'es5'],
 	mode: 'production',
+	stats: 'errors-warnings',
 	context: path.resolve(__dirname, 'src'),
 	entry:
 	{
@@ -218,7 +219,7 @@ module.exports = {
 		[
 			new TerserPlugin({
 				parallel: true,
-				extractComments: true,
+				extractComments: false,
 				terserOptions:
 				{
 					ecma           : undefined,
