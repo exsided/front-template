@@ -153,3 +153,14 @@ o2.form =
 <img src="./svg/logo.svg" alt="Logo">
 {% include "@assets/svg/logo.svg" %}
 ```
+- **Typescript** изначально ts импортируеться в **src/assets/js/main.ts**.  
+В особых случаях его можно весь импортировать в отдельный **.ts файл**, но тогда надо будет указать файлы в который все собираеться в **src/tsconfig.json**  
+```json
+{
+	"files": [
+		"общийфайл-для-ts.ts"
+	],
+}
+```  
+[TypeScript по русский](https://github.com/EbookFoundation/free-programming-books/blob/main/books/free-programming-books-ru.md#typescript)  
+[tsconfig.json - ru](https://gist.github.com/KRostyslav/82a25c469ffa6652825d58537ac6bc22)  
