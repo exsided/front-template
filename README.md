@@ -5,18 +5,18 @@
  |       |    \_ |_____| |  \_|    |          \/                                                
 
 </pre>
-# npm run dev
-- сборка проекта в режиме разработки в папку **_dev** (она в **.gitignore**)
-# npm run serve
-- запуск проекта в режиме разработки
-- запуск локального сервера
-- создает **html** файл со списокм ссылок на другие страницы
 # npm start
 - запуск проекта в режиме разработки
 - запуск локального сервера, и открытие **index.html** в браузре
 - создает **html** файл со списокм ссылок на другие страницы
 # npm run build
 - сборка и минификация (**js**, **css**) проекта
+# npm run dev
+- сборка проекта в режиме разработки в папку **_dev** (она в **.gitignore**)
+# npm run serve
+- запуск проекта в режиме разработки
+- запуск локального сервера
+- создает **html** файл со списокм ссылок на другие страницы
 # pages-list
 - создает **html** файл со списокм ссылок на другие страницы
 # pages-list-dev
@@ -129,13 +129,27 @@ o2.form =
 │    │   │  
 │    │   └── catalog.twig  
 ```
+**Пример страницы catalog.twig**
+```twig
+{% extends "@layouts/layout.twig" %}
+
+{% block page %}
+{#
+	Пример подключения файла
+	{% include '@blocks/component/component.twig' %}
+	Пример подключения svg
+	{% include '@assets/svg/component.svg' %}
+#}
+{% endblock %}
+```
 - Картинки вставляются **./img/имя**  
 **Пример:**
 ```html
 <img src="./img/logo.png" alt="Logo">
 ```
-- **Svg - иконки** вставляются **./img/имя**  
+- **SVG - иконки** вставляются **./svg/имя**, либо кодом -> **twig include**
 **Пример:**
-```html
-<img src="./img/logo.png" alt="Logo">
+```twig
+<img src="./svg/logo.svg" alt="Logo">
+{% include "@assets/svg/logo.svg" %}
 ```
