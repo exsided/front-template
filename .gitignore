@@ -5,6 +5,7 @@ bower_components
 node_modules
 .htpasswd
 .htaccess
+package-lock.json
 
 /.idea
 .idea
