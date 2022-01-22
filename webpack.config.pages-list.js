@@ -15,6 +15,7 @@ const pagesList = require('./src/pages.json').reduce( (list, el) =>
 
 module.exports = {
 	entry: path.resolve(__dirname, 'src/templates/pages-list.js'),
+	stats: 'errors-warnings',
 	output:
 	{
 		path: path.resolve(__dirname, outputDir + '/pages-list/'),
