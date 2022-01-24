@@ -174,3 +174,6 @@ o2.form =
 ```  
 [TypeScript по русский](https://github.com/EbookFoundation/free-programming-books/blob/main/books/free-programming-books-ru.md#typescript)  
 [tsconfig.json - ru](https://gist.github.com/KRostyslav/82a25c469ffa6652825d58537ac6bc22)  
+
+P.S
+Если что я вложил в этот сборщик свою душу, пот, слезы и друшие жидкости моего организма
