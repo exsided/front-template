@@ -76,11 +76,8 @@ module.exports = {
 	context: path.resolve(__dirname, 'src'),
 	entry:
 	{
-		main:
-		[
-			path.resolve(__dirname, 'src/assets/js/main.ts'),
-		],
 		critical: path.resolve(__dirname, 'src/assets/js/critical.js'),
+		main: path.resolve(__dirname, 'src/assets/js/main.ts'),
 	},
 	output: {
 		path: path.resolve(__dirname, outputDir),
